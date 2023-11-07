@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;600;700;800;900&display=swap');
+
+body{
+  font-family: 'Fira Sans Condensed', sans-serif;
+background-color: #ffffff;
+color:#000000;
+}
+*{
+box-sizing: border-box;
+margin:0;
+padding:0;
+}
+ul{
+list-style: none;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+margin-top: 0;
+margin-bottom: 0rem;
+font-weight: 500;
+line-height: 1.2;
+}
+a{
+text-decoration: none;
+color: rgb(0, 217, 255);
+}
+a:hover{
+text-decoration: none;
+color: rgb(0, 217, 255);
+}
+.inner_container{
+display: flex;
+flex-wrap: wrap;
+}
+.items-middle{
+align-items: center;
+}
+.space-between{
+justify-content: space-between;
+}
+/*header*/
+.header{
+box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
+background: #000000ee;
+
+}
+ /* Add your CSS styles here */
+ .active-nav-item {
+  color: #f3a93d !important;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #000000ee;
+}
+.header .logo,
+.header .nav{
+padding:0 15px;
+}
+.header .logo a{
+font-size: 25px;
+color: #ffffff;
+font-weight: 500;
+text-transform: capitalize;
+}
+
+.header .nav ul li{
+display: inline-block;
+margin-left: 20px;
+}
+.header .nav ul li a{
+display: block;
+font-size: 17px;
+text-transform: capitalize;
+color: #ffffff;
+padding: 10px 0;
+font-weight: 500;
+transition: all 0.5s ease;
+}
+
+.header .nav ul li a:hover{
+color: #f3a93d;
+}
+.nav-toggler{
+height: 34px;
+width: 44px;
+background-color: #ffffff;
+border-radius: 4px;
+cursor: pointer;
+border:none;
+display: none;
+margin-right: 15px;
+}
+.nav-toggler:focus{
+outline: none;
+box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+.nav-toggler span{
+height: 2px;
+width: 20px;
+background-color: #000000;
+display: block;
+margin:auto;
+position: relative;
+transition: all 0.3s ease;
+}
+.nav-toggler.active span{
+background-color: transparent;
+}
+.nav-toggler span::before,
+.nav-toggler span::after{
+content: '';
+position: absolute;
+left:0;
+top:0;
+width: 100%;
+height: 100%;
+background-color: #000000;
+transition: all 0.3s ease;
+}
+.nav-toggler span::before{
+transform: translateY(-6px);
+}
+.nav-toggler.active span::before{
+transform: rotate(45deg);
+}
+.nav-toggler span::after{
+transform: translateY(6px);
+}
+.nav-toggler.active span::after{
+transform: rotate(135deg);
+}
+@media(max-width:991px){
+.nav-toggler{
+display: block;
+}
+.header{
+padding: 12px 0;
+}
+.profile_content img{
+width: 50%;
+border-radius: 10px;
+}
+
+.header .nav{
+width: 100%;
+padding:0;
+max-height: 0px;
+overflow: hidden;
+visibility: hidden;
+transition: all 0.5s ease;
+}
+.header .nav.open{
+visibility: visible;
+}
+.header .nav ul{
+padding:12px 15px 0;
+margin-top: 12px;
+width: 100%;
+border-top:1px solid rgba(255,255,255,0.2);
+}
+.header .nav ul li{
+display: block;
+margin:0;
+}
+}
